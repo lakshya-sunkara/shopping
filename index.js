@@ -16,12 +16,20 @@ document.getElementById('login-btn').addEventListener('click', () => {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    if ((email === 'lakshya'||email === 'sujith'||email === 'abhijith') && password === '123') {
-        alert('Login successful!');
-        document.getElementById('login-section').style.display = 'none';
-        document.getElementById('catalog-section').style.display = 'block';
-        loadProductCatalog();
-    } else {
+    if ((email === 'lakshya' || email === 'sujith' || email === 'abhijith') && password === '123') {
+    alert('Login successful!');
+    loggedIn = true;
+
+    // Show sections
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('catalog-section').style.display = 'block';
+
+    // ✅ Show the navbar links
+    document.getElementById('nav-links').style.display = 'flex';
+
+    loadProductCatalog();
+}
+ else {
         alert('Invalid email or password');
     }
 });
@@ -175,6 +183,7 @@ document.getElementById('logout-link').addEventListener('click', (e) => {
     document.getElementById('catalog-section').style.display = 'none';
     document.getElementById('cart-section').style.display = 'none';
     document.getElementById('bill-section').style.display = 'none';
+    document.getElementById('nav-links').style.display = 'none';
 
     alert("You have been logged out.");
 });
