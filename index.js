@@ -1,6 +1,11 @@
 
 let loggedIn = false;
 
+let registeredUsers = [
+    { email: "lakshya@gmail.com", password: "123" },
+    { email: "sandeep@gmail.com", password: "123" },
+    { email: "sahil@gamil.com", password: "123" }
+];
 
 const products = [
     { id: 1, name: "Shoes", price: 29, image: "SHOES.jpeg", promoEligible: true },
@@ -11,12 +16,41 @@ const products = [
 ];
 let cart = [];
 
+
+document.getElementById("register-btn").addEventListener("click", () => {
+    const email = document.getElementById("register-email").value;
+    const password = document.getElementById("register-password").value;
+
+    // Check if user already exists
+    const exists = registeredUsers.some(user => user.email === email);
+    if (exists) {
+        alert("User already exists!");
+        return;
+    }
+
+    registeredUsers.push({ email, password });
+    alert("Registration successful! Please login.");
+    
+    document.getElementById("register-section").style.display = "none";
+    document.getElementById("login-section").style.display = "block";
+});
+document.getElementById("show-register").addEventListener("click", () => {
+    document.getElementById("login-section").style.display = "none";
+    document.getElementById("register-section").style.display = "block";
+});
+
+document.getElementById("show-login").addEventListener("click", () => {
+    document.getElementById("register-section").style.display = "none";
+    document.getElementById("login-section").style.display = "block";
+});
+
 // Authentication - Simple Login
 document.getElementById('login-btn').addEventListener('click', () => {
     const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
 
-    if ((email === 'lakshya' || email === 'sujith' || email === 'abhijith') && password === '123') {
+   const user = registeredUsers.find(u => u.email === email && u.password === password);
+if (user) {
     alert('Login successful!');
     loggedIn = true;
 
