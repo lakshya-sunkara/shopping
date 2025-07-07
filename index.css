@@ -1,26 +1,22 @@
-/* General styling */
+
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
 .container { width: 90%; max-width: 1200px; margin: 20px auto; }
 .section { margin: 20px 0; padding: 20px; border-radius: 8px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
 
-/* Login and Registration */
 #login-form, #register-form { display: none; }
 .input-group { margin-bottom: 10px; }
 label { display: block; margin-bottom: 5px; }
 input { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
 
-/* Product catalog styling */
 .product { display: inline-block; width: 200px; margin: 10px; text-align: center; }
 .product img { width: 100%; border-radius: 8px; }
 .product h3 { margin: 10px 0; }
 .button { padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
 .add-cart-btn { background-color: hwb(122 30% 31%); color: #fff; }
 
-/* Cart and Checkout */
 #cart-section ul { list-style: none; padding: 0; }
 .cart-item { padding: 8px; border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; }
 
-/* Promo Code */
 .promo-input { margin-top: 10px; }
 .but{
     text-align: center;
@@ -30,63 +26,61 @@ input { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
     color: white;
 }
 .button:hover {
-    background-color: hwb(122 30% 31%);    /* New background color on hover */
-    color:white;               /* Change text color on hover */
-    transform: scale(1.1);         /* Increase size by 10% */
+    background-color: hwb(122 30% 31%);    
+    color:white;               
+    transform: scale(1.1);         
   }
   .b:hover {
-    background-color: hwb(122 30% 31%);    /* New background color on hover */
-    color:white;               /* Change text color on hover */
-    transform: scale(1.1);         /* Increase size by 10% */
+    background-color: hwb(122 30% 31%);    
+    color:white;              
+    transform: scale(1.1);         
   }
 
 
-  /* Basic reset */
+  
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Style for the navigation bar */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;        /* Green background for navbar */
+    background-color: green;        
     padding: 10px 20px;
   }
   
-  /* Style for the logo */
+  
   .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;                   /* White text color for logo */
+    color: white;                 
     text-decoration: none; 
-            /* Remove underline */
+         
   }
   
-  /* Style for the navigation links container */
   .nav-links {
     list-style-type: none;
     display: flex;
   }
   
-  /* Style for each navigation link */
+ 
   .nav-links li {
     margin-left: 20px;
   }
   
   .nav-links a {
-    text-decoration: none;          /* Remove underline */
-    color: white;                   /* White text color for links */
+    text-decoration: none;          
+    color: white;                  
     font-size: 18px;
-    transition: color 0.3s ease;     /* Smooth color transition on hover */
+    transition: color 0.3s ease;     
   }
   
-  /* Hover effect for links */
+  
   .nav-links a:hover {
-    color: #f39c12;                 /* Yellow color on hover */
+    color: #f39c12;                 
   }
   
 #nav-links {
